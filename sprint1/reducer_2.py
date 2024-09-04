@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 import sys
 
 # inicializamos el diccionario
@@ -18,8 +18,8 @@ for linea in sys.stdin:
 
     try:
         origenes[origenId] += cuenta
-    except:
+    except IndexError:
         origenes[origenId] = cuenta
 
 for origenId in origenes.keys():
-    print(origenId.strip(),",", origenes[origenId])
+    print(origenId.strip(), ",", origenes[origenId])

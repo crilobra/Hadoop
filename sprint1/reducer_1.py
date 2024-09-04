@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 import sys
 
 # inicializamos el diccionario
@@ -18,8 +18,8 @@ for linea in sys.stdin:
 
     try:
         dias[dia] += cuenta
-    except:
+    except IndexError:
         dias[dia] = cuenta
 
 for dia in dias.keys():
-    print(dia.strip(),",", dias[dia])
+    print(dia.strip(), ",", dias[dia])
